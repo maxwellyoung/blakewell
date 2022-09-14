@@ -7,7 +7,7 @@ html,
 body {
 	padding: 0;
 	margin: 0;
-	font-family: 'Archivo', sans-serif;
+	font-family: 'Syne', sans-serif;
 }
 
 a {
@@ -26,5 +26,87 @@ a {
 	body {
 		color: white;
 		background: black;
+	}
+}
+
+.hero {
+	height: 100vh;
+	width: 100vw;
+	margin: 0vh 0vw;
+	background-color: #eee;
+	background-position: center;
+	background-size: cover;
+	object-fit: cover;
+	animation: image 13s infinite alternate;
+}
+
+.heroContent {
+	/* padding: 15%; */
+	justify-content: center;
+	height: 100%;
+}
+
+.contact {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	width: 100%;
+	padding-left: 2%;
+	padding-right: 2%;
+	padding-bottom: 0.7%;
+	padding-top: 0.7%;
+	font-weight: 200;
+	position: absolute;
+	z-index: 1;
+	bottom: 0;
+	left: 0;
+	background: none;
+	opacity: 100%;
+}
+
+.contact li:nth-child(1) {
+	text-align: left;
+}
+
+.contact li:nth-child(2) {
+	text-align: center;
+}
+
+.contact li:nth-child(3) {
+	text-align: right;
+}
+
+.frame2 {
+	height: 100vh;
+	width: 100vw;
+	margin: 0vh 0vw;
+	background-color: black;
+	background-position: center;
+	background-size: cover;
+	object-fit: cover;
+}
+
+.frame2Boat {
+	background-position: center;
+	background-size: cover;
+	object-fit: cover;
+	background-image: url('/2.png');
+}
+
+@keyframes image {
+	0% {
+		background-image: url('/1.png');
+	}
+	25% {
+		background-image: url('/2.png');
+	}
+	50% {
+		background-image: url('/3.png');
+	}
+	75% {
+		background-image: url('/4.png');
+	}
+	100% {
+		background-image: url('/5.png');
 	}
 }

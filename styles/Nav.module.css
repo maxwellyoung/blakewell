@@ -1,0 +1,47 @@
+.nav {
+	width: 100%;
+	padding-left: 2%;
+	padding-right: 2%;
+	padding-bottom: 0.7%;
+	padding-top: 0.7%;
+	font-weight: 200;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	background: none;
+	opacity: 100%;
+	text-align: center;
+	/* border: 3px red solid; */
+}
+
+.header {
+	justify-content: center;
+}
+
+.button {
+	font-family: 'Syne', sans-serif;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: auto;
+	/* padding: 20%; */
+}
+
+.nav > ul {
+	display: flex;
+	justify-content: space-between;
+	list-style-type: none;
+}
+
+.nav > ul > li {
+	/* padding-left: 8%; */
+	font-family: 'Syne', sans-serif;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: auto;
+}
+
+.nav > ul :hover {
+	opacity: 70%;
+	transition: 0.7s;
+}

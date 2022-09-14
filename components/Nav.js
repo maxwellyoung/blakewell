@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import navStyles from '../styles/Nav.module.css'
-
+import styles from '../styles/Home.module.css'
+import Image from 'next/image'
 import React from 'react'
 import { useState } from 'react'
 import Header from './Header'
@@ -20,15 +21,27 @@ const Nav = () => {
 		<nav className="navContainer">
 			<div>
 				<nav className={navStyles.nav}>
-					<Header />
-
-					<ul className="DESKTOP-MENU hidden space-x-8 lg:flex">
+					<ul className="flex flex-row space-x-4 space-x items-center">
 						<li>
-							<a href="#">EXPERTISE</a>
+							<a href="#" className="button">
+								EXPERTISE
+							</a>
 						</li>
 						<li>
-							<a href="#">PORTFOLIO</a>
+							<a href="#" className="button">
+								PORTFOLIO
+							</a>
 						</li>
+						<Link href="/">
+							<Image
+								src="/Logo.svg"
+								className="content-center"
+								width={260}
+								height={50}
+								layout="intrinsic"
+								alt="logo"
+							/>
+						</Link>
 						<li>
 							<a href="#">AWARDS</a>
 						</li>
