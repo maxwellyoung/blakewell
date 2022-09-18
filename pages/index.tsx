@@ -1,7 +1,9 @@
+import { Button } from '@mui/material'
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+// import Button from '@mui/material'
 
 const Home: NextPage = () => {
 	return (
@@ -13,31 +15,200 @@ const Home: NextPage = () => {
 			</Head>
 			<div className="hero">
 				<div className="heroContent flex content-center">
-					<Image
-						alt="big logo"
-						src="/LogoLarge.svg"
-						height={350}
-						width={1000}
-						layout="intrinsic"
-					/>
-					<ul className="caption contact">
-						<li className="caption">
-							+64 9 480 6800 <br /> INFO@BAKEWELL-WHITE@GMAIL.COM
-						</li>
-						<li>
-							BAKEWELL-WHITE YACHT DESIGN LTD <br /> PACE WITH GRACE /
-							BAKEWELL-WHITE &copy; 2022
-						</li>
-						<li>
-							EST. 1994
-							<br />
-							AUCKLAND / NEW ZEALAND
-						</li>
-					</ul>
+					<div className="heroBG flex content-center">
+						<div className="heroGradient"></div>
+						<div className="logoContainer ">
+							<div className="logo">
+								<a href="#">
+									<Image
+										alt="big logo"
+										src="/LogoLarge.svg"
+										layout="responsive"
+										width="1000"
+										height="90"
+										// objectFit="contain"
+									/>
+								</a>
+							</div>
+							<ul className="caption contact">
+								<li className="">
+									+64 9 480 6800 <br /> INFO@BAKEWELL-WHITE@GMAIL.COM
+								</li>
+								<li>
+									BAKEWELL-WHITE YACHT DESIGN LTD <br /> PACE WITH GRACE /
+									&copy; 2022
+								</li>
+								<li>
+									EST. 1994
+									<br />
+									AUCKLAND / NEW ZEALAND
+								</li>
+							</ul>
+						</div>
+					</div>
 				</div>
 			</div>
 			<div className="frame2">
-				<div className="frame2Boat"></div>
+				<Image src="/mesh.svg" alt="mesh" layout="fill" objectFit="contain" />
+				<div className="container flex content-center">
+					<h2 className="header1">WE ARE AN AWARD WINNING</h2>
+					<h2 className="header2">BOUTIQUE DESIGN STUDIO</h2>
+					{/* <Image src="/2.png" alt="boat image" width={350} height={150} /> */}
+				</div>
+			</div>
+			<div className="frame3">
+				<div className="frame3Content">
+					<h2 className="h2">Selected works</h2>
+					<div className="buttonContainer">
+						<a className="button">See all designs</a>
+						<Image
+							src="/Arrow.svg"
+							alt="arrow"
+							layout="intrinsic"
+							width={320}
+							height={106}
+							objectFit="contain"
+						/>
+					</div>
+				</div>
+			</div>
+			<div className="frame4 bg-color-white text-[#0E1219]">
+				<div className="heading1">
+					<h2 className="h2">AWARD WINNING-DESIGNS</h2>
+				</div>
+
+				<div className="designMesh">
+					<Image
+						src="/Mesh2.svg"
+						alt="mesh"
+						layout="responsive"
+						width={1000}
+						height={1000}
+						objectFit="contain"
+					/>
+				</div>
+
+				<div className="projectContainer">
+					<div className="h3 project">
+						<ul>
+							<li>
+								<span className="caption">[01]</span>
+								<a>CQS</a>
+							</li>
+							<li className="p boatType">29m DSS Super-Maxi Race Yatch</li>
+						</ul>
+						<ul>
+							<li>
+								<span className="caption">[02]</span>ANARCHY
+							</li>
+							<li className="p boatType">YD 37.11M Club Racer</li>
+						</ul>
+						<ul>
+							<li>
+								<span className="caption">[03]</span>A FORK IN THE ROAD
+							</li>
+							<li className="p boatType">13.7M IRC Race Yacht</li>
+						</ul>
+						<ul>
+							<li>
+								<span className="caption">[04]</span>GENERAL LEE
+							</li>
+							<li className="p boatType">11.3M IRC Race Yacht</li>
+						</ul>
+						<ul>
+							<li>
+								<span className="caption">[05]</span>ZANA/KONICA MINOLTA/LAHANA
+							</li>
+							<li className="p boatType">30m Super-Maxi</li>
+						</ul>
+						<ul>
+							<li>
+								<span className="caption">[06]</span>WIRED
+							</li>
+							<li className="p boatType">15.85m Canting Keel Racer/Cruiser</li>
+						</ul>
+						<ul>
+							<li>
+								<span className="caption">[07]</span>JAZZ PLAYER
+							</li>
+							<li className="p boatType">
+								12m Production One Design Racer / Cruiser
+							</li>
+						</ul>
+						<ul>
+							<li>
+								<span className="caption">[08]</span>BRAVEHEART/VALKYRIE
+							</li>
+							<li className="p boatType">15.85m TP52 Carbon Race Yacht</li>
+						</ul>
+						<ul>
+							<li>
+								<span className="caption">[09]</span>NZL-403
+							</li>
+							<li className="p boatType">Mini 650 Carbon Race Yacht</li>
+						</ul>
+						<ul>
+							<li>
+								<span className="caption">[10]</span>TIME TO BURN
+							</li>
+							<li className="p boatType">12.5m Cruiser / Racer</li>
+						</ul>
+
+						<a href="#" className="button boatType">
+							VIEW MORE
+						</a>
+					</div>
+				</div>
+			</div>
+			<div className="footer">
+				<div className="flex flex-row justify-between w-full px-8">
+					<ul className="caption">
+						<li className="text-left pt-5">
+							<a href="#" className="uppercase text-left">
+								info@bakewell-white.com
+							</a>
+						</li>
+						<li className="pt-5">
+							<a href="#">+64 9 480 6800</a>
+						</li>
+						<li className="pt-5">
+							<a href="#">EST. 1994</a>
+						</li>
+					</ul>
+					<div className="flex flex-col justify-center items-center">
+						<h2 className="h2">GET IN TOUCH</h2>
+						<div className="buttonContainer  my-3">
+							<a className="button mt-5 justify-center">Contact us</a>
+							<div className="flex justify-center">
+								<Image
+									src="/Arrow.svg"
+									alt="arrow"
+									layout="intrinsic"
+									width={100}
+									height={60}
+									objectFit="contain"
+								/>
+							</div>
+						</div>
+					</div>
+					<ul className="caption ">
+						<li className="pt-5 ">
+							<a href="#" className="justify-end">
+								PRIVACY POLICY
+							</a>
+						</li>
+						<li className="pt-5 ">
+							<a href="#" className="justify-end">
+								FACEBOOK
+							</a>
+						</li>
+						<li className="pt-5">
+							<a href="#" className="justify-end">
+								LINKEDIN
+							</a>
+						</li>
+					</ul>
+				</div>
 			</div>
 		</div>
 	)

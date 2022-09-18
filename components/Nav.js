@@ -21,16 +21,12 @@ const Nav = () => {
 		<nav className="navContainer">
 			<div>
 				<nav className={navStyles.nav}>
-					<ul className="flex flex-row space-x-4 space-x items-center">
+					<ul className="button flex flex-row space-x-4 space-x items-center">
 						<li>
-							<a href="#" className="button">
-								EXPERTISE
-							</a>
+							<a href="#">EXPERTISE</a>
 						</li>
 						<li>
-							<a href="#" className="button">
-								PORTFOLIO
-							</a>
+							<a href="#">PORTFOLIO</a>
 						</li>
 						<Link href="/">
 							<Image

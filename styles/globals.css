@@ -3,6 +3,12 @@
 @tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Oxygen+Mono&family=Syne:wght@400;500;600;700;800&display=swap');
 
+$text-color: #fff;
+$cs-red: #a81d36;
+$other-red: #e31000;
+$small-font-size: 0.875rem;
+$bg-bottom-margin: 4rem;
+
 html,
 body {
 	padding: 0;
@@ -31,25 +37,87 @@ a {
 
 .hero {
 	height: 100vh;
-	width: 100vw;
-	margin: 0vh 0vw;
+	width: 100%;
 	background-color: #eee;
 	background-position: center;
 	background-size: cover;
 	object-fit: cover;
+	overflow: hidden;
 	animation: image 13s infinite alternate;
 }
 
 .heroContent {
 	/* padding: 15%; */
 	justify-content: center;
-	height: 100%;
+	height: 200%;
+	bottom: 0;
+	background: linear-gradient(180deg, rgba(14, 18, 25, 0) 0%, #0e1219 36.72%);
 }
 
-.contact {
+.projectContainer {
 	display: flex;
+	flex-direction: row;
+	padding: 5vh;
+	justify-content: flex-end;
+	position: relative;
+	z-index: 3;
+	/* margin-top: -20vh; */
+}
+
+.project {
+	width: 892px;
+	/* padding-top: 350px; */
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: stretch;
+	right: 10vw;
+	overflow: hidden;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.project ul {
+	border-top: 3px solid black;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	display: flex;
+	flex-direction: row;
 	justify-content: space-between;
-	align-items: flex-end;
+}
+
+.project a:nth-child(11) {
+	border-top: 3px solid black;
+	border-bottom: 3px solid black;
+	padding-top: 28px;
+	padding-bottom: 28px;
+	justify-content: end;
+}
+
+.project ul span {
+	margin: 1vw;
+	align-items: center;
+}
+
+.boatType {
+	display: flex;
+	align-items: center;
+	text-align: end;
+}
+
+.logo {
+	/* display: flex; */
+	/* align-content: flex-end; */
+	width: 100%;
+	height: 100%;
+	/* margin-bottom: 3%; */
+}
+
+.logoContainer {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 	width: 100%;
 	padding-left: 2%;
 	padding-right: 2%;
@@ -62,6 +130,18 @@ a {
 	left: 0;
 	background: none;
 	opacity: 100%;
+}
+
+.contact {
+	display: flex;
+	justify-content: space-between;
+	/* align-items: flex-end; */
+	width: 100%;
+	/* padding-left: 2%; */
+	/* padding-right: 2%; */
+	/* padding-bottom: 0.7%; */
+	padding-top: 0.7%;
+	font-weight: 200;
 }
 
 .contact li:nth-child(1) {
@@ -78,19 +158,94 @@ a {
 
 .frame2 {
 	height: 100vh;
-	width: 100vw;
+	overflow: hidden;
+	width: 100%;
+	margin: 0 0;
+	background-color: black;
+	background-position: center;
+	background-size: cover;
+	object-fit: cover;
+	background: linear-gradient(
+		180deg,
+		#0e1219 0%,
+		rgba(14, 18, 25, 0) 15.75%,
+		rgba(14, 18, 25, 0) 83.99%,
+		#0e1219 100%
+	);
+	transform: matrix(1, 0, 0, -1, 0, 0);
+}
+
+.frame2Boat {
+	background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+		url('/2.png');
+}
+
+.designMesh {
+	position: relative;
+	height: 50%;
+	width: 50%;
+	/* padding: 30%; */
+	left: -33%;
+	bottom: 10%;
+	/* overflow: hidden; */
+	z-index: 1;
+	/* padding-right: -20%; */
+}
+
+.frame3 {
+	height: 100vh;
+	width: 100%;
 	margin: 0vh 0vw;
 	background-color: black;
 	background-position: center;
 	background-size: cover;
 	object-fit: cover;
+	background: linear-gradient(180deg, rgba(14, 18, 25, 0) 0%, #0e1219 100%);
+	transform: matrix(1, 0, 0, -1, 0, 0);
 }
 
-.frame2Boat {
+.frame3Content {
+	/* transform: matrix(0, 0, 0, 0, 0, 0); */
+	display: grid;
+}
+
+.frame4 {
+	height: 100vh;
+	width: 100%;
+	margin: 0vh 0vw;
+	background-color: #f7f7f7;
 	background-position: center;
 	background-size: cover;
 	object-fit: cover;
-	background-image: url('/2.png');
+	text-color: black;
+	overflow: hidden;
+	display: grid;
+}
+
+.footer {
+	display: flex;
+	flex-direction: column;
+	/* flex: 1; */
+	padding: 3rem 0;
+	/* border-top: 1px solid #eaeaea; */
+	color: #fff;
+	justify-content: space-between;
+	/* align-items: center; */
+	background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+		linear-gradient(0deg, #a5b6bd, #a5b6bd), url('/6.png');
+	background-blend-mode: normal, color, normal;
+	background-color: white;
+	background-position: center;
+	background-size: cover;
+	z-index: 0;
+	width: 100%;
+}
+
+.footer a {
+	display: flex;
+	/* justify-content: center; */
+	/* align-items: center; */
+	flex-grow: 1;
 }
 
 @keyframes image {
@@ -108,5 +263,129 @@ a {
 	}
 	100% {
 		background-image: url('/5.png');
+	}
+}
+
+.h1 {
+	font-family: 'Syne', sans-serif;
+	font-weight: 500;
+	font-size: 36px;
+	line-height: 36px;
+}
+
+.h2 {
+	font-family: 'Syne', sans-serif;
+	font-weight: 500;
+	font-size: 24px;
+	line-height: 24px;
+}
+
+.h3 {
+	font-family: 'Syne', sans-serif;
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 18px;
+}
+
+.subheading {
+	font-family: 'Syne', sans-serif;
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 20px;
+}
+
+.p {
+	font-family: 'Archivo', sans-serif;
+	font-weight: 300;
+	font-size: 14px;
+	line-height: 22px;
+}
+
+.button {
+	font-family: 'Syne';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 14px;
+	letter-spacing: 0.2em;
+	text-transform: uppercase;
+}
+
+.buttonContainer {
+	border: ellipse(40% 50% at left);
+	shape-outside: ellipse(40% 50% at left);
+	width: 320px;
+	height: 106px;
+	border: 1px solid;
+	border-radius: 50%;
+	/* display: block; */
+}
+
+.heading1 {
+	position: absolute;
+	width: 817px;
+	height: 220px;
+	margin: 8vw;
+}
+
+.caption {
+	font-family: 'Oxygen Mono', monospace;
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 14px;
+	letter-spacing: 0.1em;
+}
+
+@media (min-width: 992px) {
+	.h1 {
+		font-family: 'Syne', sans-serif;
+		font-weight: 500;
+		font-size: 84px;
+		line-height: 84px;
+	}
+
+	.h2 {
+		font-family: 'Syne', sans-serif;
+		font-weight: 500;
+		font-size: 64px;
+		line-height: 64px;
+	}
+
+	.h3 {
+		font-family: 'Syne', sans-serif;
+		font-weight: 500;
+		font-size: 32px;
+		line-height: 32px;
+	}
+
+	.subheading {
+		font-family: 'Syne', sans-serif;
+		font-weight: 600;
+		font-size: 20px;
+		line-height: 28px;
+	}
+
+	.p {
+		font-family: 'Archivo';
+		font-style: normal;
+		font-weight: 300;
+		font-size: 16px;
+		line-height: 24px;
+	}
+
+	.button {
+		font-family: 'Syne', sans-serif;
+		font-weight: 700;
+		font-size: 16px;
+		line-height: auto;
+		letter-spacing: 20%;
+	}
+
+	.caption {
+		font-family: 'Oxygen Mono', monospace;
+		font-weight: 400;
+		font-size: 12px;
+		line-height: 14px;
+		letter-spacing: 10%;
 	}
 }
