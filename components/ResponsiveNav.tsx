@@ -105,14 +105,6 @@ const ResponsiveNavBar = () => {
 											<Typography textAlign="center">{page}</Typography>
 										</MenuItem>
 									))}
-									<Image
-										src="/Logo.svg"
-										className="content-center"
-										width={260}
-										height={50}
-										layout="intrinsic"
-										alt="logo"
-									/>
 									{rightPages.map((page) => (
 										<MenuItem key={page} onClick={handleCloseNavMenu}>
 											<Typography textAlign="center">{page}</Typography>
@@ -125,14 +117,16 @@ const ResponsiveNavBar = () => {
 								variant="h5"
 								noWrap
 								component="a"
+								className="button"
 								href=""
 								sx={{
 									mr: 2,
 									display: { xs: 'flex', md: 'none' },
 									flexGrow: 1,
-									fontFamily: 'monospace',
+									fontFamily: 'Syne',
+									fontSize: '16px',
 									fontWeight: 700,
-									letterSpacing: '.3rem',
+									letterSpacing: '.2rem',
 									color: 'inherit',
 									textDecoration: 'none',
 								}}
@@ -159,7 +153,15 @@ const ResponsiveNavBar = () => {
 									<Button
 										key={page}
 										onClick={handleCloseNavMenu}
-										sx={{ my: 2, color: 'white' }}
+										sx={{
+											my: 2,
+											color: 'white',
+											fontFamily: 'Syne',
+											fontSize: '16px',
+											fontWeight: 700,
+											letterSpacing: '.2rem',
+											textDecoration: 'none',
+										}}
 									>
 										{page}
 									</Button>
@@ -176,7 +178,15 @@ const ResponsiveNavBar = () => {
 									<Button
 										key={page}
 										onClick={handleCloseNavMenu}
-										sx={{ my: 2, color: 'white' }}
+										sx={{
+											my: 2,
+											color: 'white',
+											fontFamily: 'Syne',
+											fontSize: '16px',
+											fontWeight: 700,
+											letterSpacing: '.2rem',
+											textDecoration: 'none',
+										}}
 									>
 										{page}
 									</Button>
