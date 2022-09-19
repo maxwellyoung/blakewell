@@ -62,6 +62,20 @@ a {
 	z-index: 1;
 }
 
+.bgMesh {
+	z-index: 1;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	background-color: #eee;
+	background-position: center;
+	background-size: cover;
+	object-fit: cover;
+	overflow: hidden;
+	background: url('/Mesh.svg');
+	opacity: 0.4;
+}
+
 .projectContainer {
 	position: absolute;
 	display: flex;
@@ -174,16 +188,18 @@ a {
 	justify-content: center;
 	margin: 0 0;
 	background-color: black;
-	background-position: center;
-	background-size: cover;
 	object-fit: cover;
 	background: linear-gradient(
-		180deg,
-		#0e1219 0%,
-		rgba(14, 18, 25, 0) 15.75%,
-		rgba(14, 18, 25, 0) 83.99%,
-		#0e1219 100%
-	);
+			180deg,
+			#0e1219 0%,
+			rgba(14, 18, 25, 0) 75.75%,
+			rgba(14, 18, 25, 0) 83.99%,
+			#0e1219 300%
+		),
+		url('/2.png');
+	background-position: center;
+	background-size: cover;
+	z-index: 5;
 }
 
 .offerPanel {
@@ -273,7 +289,8 @@ p {
 	background-color: white;
 	background-position: center;
 	background-size: cover;
-	z-index: 0;
+	z-index: 3;
+	/* overflow: hidden; */
 	width: 100%;
 }
 
@@ -354,6 +371,7 @@ p {
 	height: 106px;
 	border: 1px solid;
 	border-radius: 50%;
+	z-index: 50;
 }
 
 .heading1 {

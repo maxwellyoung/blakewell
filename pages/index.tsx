@@ -57,21 +57,23 @@ const Home: NextPage = () => {
 				</div>
 			</section>
 			<section>
-				<div className="frame2">
-					<Image src="/mesh.svg" alt="mesh" layout="fill" objectFit="contain" />
+				<div className="frame2 relative h-32 w-32 ...">
+					<div className="bgMesh"></div>
 					<div
 						ref={scrollRef}
 						style={{ overflow: 'scroll' }}
 						className="flex flex-col items-center"
 					>
-						<h2 className="h2 absolute left-0 top-0 h-16 w-23 px-8">
-							WE ARE AN AWARD-WINNING
-						</h2>
-
-						<h2 className="h2 absolute bottom-0 right-0 h-16 w-16">
-							BOUTIQUE DESIGN STUDIO
-						</h2>
-
+						<div className="awardTitle1 text-left max-w-md">
+							<h2 className="h2 absolute left-20 top-10 h-16 z-10 text-left max-w-2xl">
+								WE ARE AN AWARD-WINNING
+							</h2>
+						</div>
+						<div className="awardTitle2">
+							<h2 className="h2 absolute right-20 bottom-40 h-16 z-20 text-right max-w-lg">
+								BOUTIQUE DESIGN STUDIO
+							</h2>
+						</div>
 						<motion.div
 							initial={{ opacity: 0 }}
 							whileInView={{ opacity: 1 }}
@@ -111,7 +113,7 @@ const Home: NextPage = () => {
 							whileHover={{ scale: 1.1 }}
 							onHoverStart={(e) => {}}
 							onHoverEnd={(e) => {}}
-							className="buttonContainer my-5 "
+							className="buttonContainer my-5 absolute inset-y-80 right-20 w-16 top-50"
 						>
 							<div className="">
 								<a
@@ -198,7 +200,7 @@ const Home: NextPage = () => {
 				</div>
 			</section>
 			<section>
-				<div className="frame4 bg-color-white text-[#0E1219]">
+				<div className="frame4 bg-color-white text-[#0E1219] relative">
 					<div className="heading1">
 						<h2 className="h2">AWARD WINNING-DESIGNS</h2>
 					</div>

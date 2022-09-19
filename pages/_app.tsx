@@ -1,11 +1,11 @@
 import '../styles/globals.css'
-import Nav from '../components/Nav'
+import ResponsiveNav from '../components/ResponsiveNav'
 import type { AppProps } from 'next/app'
 
 function MyApp({ Component, pageProps }: AppProps) {
 	return (
 		<>
-			<Nav />
+			<ResponsiveNav />
 			<Component {...pageProps} />
 		</>
 	)
