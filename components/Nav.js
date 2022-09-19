@@ -23,10 +23,10 @@ const Nav = () => {
 				<nav className={navStyles.nav}>
 					<ul className="button flex flex-row space-x-4 space-x items-center">
 						<li>
-							<a href="#">EXPERTISE</a>
+							<a href="#hero">EXPERTISE</a>
 						</li>
 						<li>
-							<a href="#">PORTFOLIO</a>
+							<a href="#portfolio">PORTFOLIO</a>
 						</li>
 						<Link href="/">
 							<Image
@@ -39,10 +39,10 @@ const Nav = () => {
 							/>
 						</Link>
 						<li>
-							<a href="#">AWARDS</a>
+							<a href="#tab-awards">AWARDS</a>
 						</li>
 						<li>
-							<a href="#">CONTACT US</a>
+							<a href="#contact">CONTACT US</a>
 						</li>
 					</ul>
 				</nav>
