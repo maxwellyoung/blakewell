@@ -22,14 +22,14 @@ const Works = () => {
 
 	const cardVariants: Variants = {
 		offscreen: {
-			x: 1200,
+			x: 1000,
 		},
 		onscreen: {
 			x: 0,
 			transition: {
 				type: 'spring',
-				bounce: 0.6,
-				duration: 0.1,
+				bounce: 0.3,
+				duration: 0.8,
 			},
 		},
 	}
@@ -38,7 +38,6 @@ const Works = () => {
 		<div>
 			<div className="works">
 				<motion.div
-					className="frame3Bg"
 					initial="offscreen"
 					whileInView="onscreen"
 					viewport={{ once: true, amount: 0.8 }}
@@ -97,6 +96,7 @@ const Works = () => {
 					<motion.div className="sailboat" variants={cardVariants}>
 						<Image
 							src={selectedCase.img}
+							id="sailImage"
 							alt="sailboat"
 							layout="responsive"
 							height={1000}

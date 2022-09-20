@@ -11,6 +11,10 @@
 	opacity: 0.4;
 }
 
+.work {
+	height: 100vh;
+}
+
 .frame2 {
 	height: 100vh;
 	display: flex;

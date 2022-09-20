@@ -20,7 +20,7 @@ const Expertise = () => {
 
 	return (
 		<div>
-			<div className="frame2 relative h-32 w-32 ...">
+			<div className="frame2 relative h-32 w-32">
 				<div className="bgMesh"></div>
 				<motion.div
 					className="flex flex-col items-center"

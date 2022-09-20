@@ -297,10 +297,9 @@ a {
 
 	.frame3Bg {
 		background-color: black;
-		height: 100%;
-		width: 100%;
+
 		overflow: hidden;
-		z-index: 3;
+		z-index: 30;
 		background-position: center;
 		background-size: cover;
 		object-fit: cover;
@@ -338,7 +337,10 @@ a {
 		left: 55%;
 		bottom: 0%;
 		z-index: 5;
-		transition-duration: 2s;
+	}
+
+	#sailImage {
+		-webkit-transition: opacity 4s ease;
 	}
 
 	.awards {

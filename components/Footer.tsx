@@ -19,8 +19,8 @@ const Footer = () => {
 						<a href="#">EST. 1994</a>
 					</li>
 				</ul>
-				<div className="flex flex-col justify-center items-center">
-					<h2 className="h2">GET IN TOUCH</h2>
+				<div className="flex flex-col justify-center items-center h-max">
+					<h2 className="h2  mb-4">GET IN TOUCH</h2>
 					<motion.div
 						className="buttonContainer"
 						whileHover={{ scale: 1.1 }}
