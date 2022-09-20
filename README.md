@@ -10,6 +10,8 @@ tasklist
 
 ## refactor for responsiveness with MUI components
 
+- replace tailwind with better formatted styling
+
 ## break into components
 
-- button
+## switch from framer motion to react-spring
