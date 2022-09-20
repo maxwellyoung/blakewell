@@ -7,7 +7,8 @@ import Typography from '@mui/material/Typography'
 import Menu from '@mui/material/Menu'
 import MenuIcon from '@mui/icons-material/Menu'
 import Container from '@mui/material/Container'
-import Avatar from '@mui/material/Avatar'
+import Slide from '@mui/material/Slide'
+import useScrollTrigger from '@mui/material/useScrollTrigger'
 import Button from '@mui/material/Button'
 import Tooltip from '@mui/material/Tooltip'
 import MenuItem from '@mui/material/MenuItem'
@@ -39,187 +40,187 @@ const ResponsiveNavBar = () => {
 		setAnchorElUser(null)
 	}
 
+	const trigger = useScrollTrigger()
+
 	return (
 		<nav className="navContainer">
-			{/* <div className="py-12"></div> */}
 			<nav className={navStyles.nav}>
-				<AppBar
-					position="static"
-					sx={{
-						backgroundColor: 'transparent',
-						boxShadow: 0,
-					}}
-				>
-					<Container maxWidth="xl">
-						<Toolbar disableGutters>
-							{/* <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} /> */}
-
-							<Typography
-								variant="h6"
-								noWrap
-								component="a"
-								href="/"
-								sx={{
-									mr: 2,
-									display: { xs: 'none', md: 'flex' },
-									fontFamily: 'Syne',
-									fontSize: '16px',
-									fontWeight: 700,
-									letterSpacing: '.2rem',
-									color: 'inherit',
-									textDecoration: 'none',
-								}}
-							></Typography>
-
-							<Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
-								<IconButton
-									size="large"
-									aria-label="account of current user"
-									aria-controls="menu-appbar"
-									aria-haspopup="true"
-									onClick={handleOpenNavMenu}
-									color="inherit"
-								>
-									<MenuIcon />
-								</IconButton>
-								<Menu
-									id="menu-appbar"
-									anchorEl={anchorElNav}
-									anchorOrigin={{
-										vertical: 'bottom',
-										horizontal: 'left',
-									}}
-									keepMounted
-									transformOrigin={{
-										vertical: 'top',
-										horizontal: 'left',
-									}}
-									open={Boolean(anchorElNav)}
-									onClose={handleCloseNavMenu}
+				<Slide appear={false} direction="down" in={!trigger}>
+					<AppBar
+						position="static"
+						sx={{
+							backgroundColor: 'transparent',
+							boxShadow: 0,
+						}}
+					>
+						<Container maxWidth={false}>
+							<Toolbar disableGutters>
+								<Typography
+									variant="h6"
+									noWrap
+									component="a"
+									href="/"
 									sx={{
-										display: { xs: 'block', md: 'none' },
+										mr: 2,
+										display: { xs: 'none', md: 'flex' },
+										fontFamily: 'Syne',
+										fontSize: '16px',
+										fontWeight: 700,
+										letterSpacing: '.2rem',
+										color: 'inherit',
+										textDecoration: 'none',
+									}}
+								></Typography>
+
+								<Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+									<IconButton
+										size="large"
+										aria-label="account of current user"
+										aria-controls="menu-appbar"
+										aria-haspopup="true"
+										onClick={handleOpenNavMenu}
+										color="inherit"
+									>
+										<MenuIcon />
+									</IconButton>
+									<Menu
+										id="menu-appbar"
+										anchorEl={anchorElNav}
+										anchorOrigin={{
+											vertical: 'bottom',
+											horizontal: 'left',
+										}}
+										keepMounted
+										transformOrigin={{
+											vertical: 'top',
+											horizontal: 'left',
+										}}
+										open={Boolean(anchorElNav)}
+										onClose={handleCloseNavMenu}
+										sx={{
+											display: { xs: 'block', md: 'none' },
+										}}
+									>
+										{leftPages.map((page) => (
+											<MenuItem key={page} onClick={handleCloseNavMenu}>
+												<Typography textAlign="center">{page}</Typography>
+											</MenuItem>
+										))}
+										{rightPages.map((page) => (
+											<MenuItem key={page} onClick={handleCloseNavMenu}>
+												<Typography textAlign="center">{page}</Typography>
+											</MenuItem>
+										))}
+									</Menu>
+								</Box>
+
+								<Typography
+									variant="h5"
+									noWrap
+									component="a"
+									className="button"
+									href=""
+									sx={{
+										mr: 2,
+										display: { xs: 'flex', md: 'none' },
+										flexGrow: 1,
+										fontFamily: 'Syne',
+										fontSize: '16px',
+										fontWeight: 700,
+										letterSpacing: '.2rem',
+										color: 'inherit',
+										textDecoration: 'none',
+									}}
+								>
+									<Image
+										src="/Logo.svg"
+										className="content-center"
+										width={260}
+										height={50}
+										layout="intrinsic"
+										alt="logo"
+									/>
+								</Typography>
+
+								<Box
+									sx={{
+										flexGrow: 1,
+										display: { xs: 'none', md: 'flex' },
+										justifyContent: 'space-between',
 									}}
 								>
 									{leftPages.map((page) => (
-										<MenuItem key={page} onClick={handleCloseNavMenu}>
-											<Typography textAlign="center">{page}</Typography>
-										</MenuItem>
+										<Button
+											key={page}
+											onClick={handleCloseNavMenu}
+											sx={{
+												my: 2,
+												color: 'white',
+												fontFamily: 'Syne',
+												fontSize: '16px',
+												fontWeight: 700,
+												letterSpacing: '.2rem',
+												textDecoration: 'none',
+											}}
+										>
+											{page}
+										</Button>
 									))}
+									<Image
+										src="/Logo.svg"
+										className="content-center"
+										width={260}
+										height={50}
+										layout="intrinsic"
+										alt="logo"
+									/>
 									{rightPages.map((page) => (
-										<MenuItem key={page} onClick={handleCloseNavMenu}>
-											<Typography textAlign="center">{page}</Typography>
-										</MenuItem>
+										<Button
+											key={page}
+											onClick={handleCloseNavMenu}
+											sx={{
+												my: 2,
+												color: 'white',
+												fontFamily: 'Syne',
+												fontSize: '16px',
+												fontWeight: 700,
+												letterSpacing: '.2rem',
+												textDecoration: 'none',
+											}}
+										>
+											{page}
+										</Button>
 									))}
-								</Menu>
-							</Box>
+								</Box>
 
-							<Typography
-								variant="h5"
-								noWrap
-								component="a"
-								className="button"
-								href=""
-								sx={{
-									mr: 2,
-									display: { xs: 'flex', md: 'none' },
-									flexGrow: 1,
-									fontFamily: 'Syne',
-									fontSize: '16px',
-									fontWeight: 700,
-									letterSpacing: '.2rem',
-									color: 'inherit',
-									textDecoration: 'none',
-								}}
-							>
-								<Image
-									src="/Logo.svg"
-									className="content-center"
-									width={260}
-									height={50}
-									layout="intrinsic"
-									alt="logo"
-								/>
-							</Typography>
-
-							<Box
-								sx={{
-									flexGrow: 1,
-									display: { xs: 'none', md: 'flex' },
-
-									justifyContent: 'space-between',
-								}}
-							>
-								{leftPages.map((page) => (
-									<Button
-										key={page}
-										onClick={handleCloseNavMenu}
-										sx={{
-											my: 2,
-											color: 'white',
-											fontFamily: 'Syne',
-											fontSize: '16px',
-											fontWeight: 700,
-											letterSpacing: '.2rem',
-											textDecoration: 'none',
+								<Box sx={{ flexGrow: 0 }}>
+									<Menu
+										sx={{ mt: '45px' }}
+										id="menu-appbar"
+										anchorEl={anchorElUser}
+										anchorOrigin={{
+											vertical: 'top',
+											horizontal: 'right',
 										}}
-									>
-										{page}
-									</Button>
-								))}
-								<Image
-									src="/Logo.svg"
-									className="content-center"
-									width={260}
-									height={50}
-									layout="intrinsic"
-									alt="logo"
-								/>
-								{rightPages.map((page) => (
-									<Button
-										key={page}
-										onClick={handleCloseNavMenu}
-										sx={{
-											my: 2,
-											color: 'white',
-											fontFamily: 'Syne',
-											fontSize: '16px',
-											fontWeight: 700,
-											letterSpacing: '.2rem',
-											textDecoration: 'none',
+										keepMounted
+										transformOrigin={{
+											vertical: 'top',
+											horizontal: 'right',
 										}}
+										open={Boolean(anchorElUser)}
+										onClose={handleCloseUserMenu}
 									>
-										{page}
-									</Button>
-								))}
-							</Box>
-
-							<Box sx={{ flexGrow: 0 }}>
-								<Menu
-									sx={{ mt: '45px' }}
-									id="menu-appbar"
-									anchorEl={anchorElUser}
-									anchorOrigin={{
-										vertical: 'top',
-										horizontal: 'right',
-									}}
-									keepMounted
-									transformOrigin={{
-										vertical: 'top',
-										horizontal: 'right',
-									}}
-									open={Boolean(anchorElUser)}
-									onClose={handleCloseUserMenu}
-								>
-									{settings.map((setting) => (
-										<MenuItem key={setting} onClick={handleCloseUserMenu}>
-											<Typography textAlign="center">{setting}</Typography>
-										</MenuItem>
-									))}
-								</Menu>
-							</Box>
-						</Toolbar>
-					</Container>
-				</AppBar>
+										{settings.map((setting) => (
+											<MenuItem key={setting} onClick={handleCloseUserMenu}>
+												<Typography textAlign="center">{setting}</Typography>
+											</MenuItem>
+										))}
+									</Menu>
+								</Box>
+							</Toolbar>
+						</Container>
+					</AppBar>
+				</Slide>
 			</nav>
 		</nav>
 	)

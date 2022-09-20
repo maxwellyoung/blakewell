@@ -1,0 +1,54 @@
+.bgMesh {
+	z-index: 1;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	background-color: #eee;
+	background-position: center;
+	background-size: fill;
+	object-fit: cover;
+	background: url('/Mesh.svg');
+	opacity: 0.4;
+}
+
+.frame2 {
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	z-index: 1;
+	overflow: hidden;
+	width: 100%;
+	position: relative;
+	justify-content: center;
+	margin: 0 0;
+	background-color: black;
+	object-fit: cover;
+	background: linear-gradient(
+			180deg,
+			#0e1219 0%,
+			rgba(14, 18, 25, 0) 75.75%,
+			rgba(14, 18, 25, 0) 83.99%,
+			#0e1219 300%
+		),
+		url('/2.png');
+	background-position: center;
+	background-size: cover;
+	z-index: 5;
+}
+
+.offerPanel {
+	width: 60%;
+	padding: 5% 11%;
+	background-color: black;
+	object-fit: cover;
+	background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+		url('/2.png');
+	background-position: center;
+	background-size: cover;
+	z-index: 5;
+}
+
+.frame2Boat {
+	background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+		url('/2.png');
+}

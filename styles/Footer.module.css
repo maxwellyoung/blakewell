@@ -1,0 +1,28 @@
+.container {
+	width: 100%;
+	display: flex;
+
+	background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+		linear-gradient(0deg, #a5b6bd, #a5b6bd), url('/6.png');
+	background-blend-mode: normal, color, normal;
+	background-color: white;
+	background-position: center;
+	background-size: cover;
+	z-index: 3;
+	height: 70vh;
+}
+
+@media (min-width: 992px) {
+	.container {
+		padding: 3rem 0;
+		height: 100%;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+
+	.container a {
+		display: flex;
+		flex-grow: 1;
+		text-transform: uppercase;
+	}
+}
